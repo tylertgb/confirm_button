@@ -8,28 +8,30 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #ddd;
     box-sizing: border-box;
     height: 100vh;
 }
 
-form{
-    position: relative;
-}
 
 /* Form heading */
 h2 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
+form{
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 4px;
+}
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -39,12 +41,13 @@ input[type="number"] {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus {
+input[type="password"]:focus {
     border-color: #007bff;
     outline: none;
 }
 
 .btn{
+    min-width: 100%;
     margin-top: 2rem;
     padding: 10px 20px;
     background: #007bff;
@@ -56,14 +59,25 @@ input[type="number"]:focus {
     cursor: pointer;
     z-index: 2;
 }
+.submitAnother{
+    display: none;
+    justify-content: center;
+    font-family: 15px;
+    text-decoration: underline;
+    font-weight: 400;
+    cursor: pointer;
+}
+.submitAnother:hover{
+    color: #007bff;
+}
 .btn:hvoer{
     background: #0056b3 ;
 }
 .check{
     position: absolute;
     opacity: 0;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -72,18 +86,23 @@ input[type="number"]:focus {
     color: #fff;
     font-size: 30px;
     border: 1px solid #049117;
+    margin-right: 10px;
+}
+.check i{
+    font-size: 24px;
 }
 .message{
     opacity: 0;
-    font-size: 1.5rem;
+    font-size: 15px;
 }
 
 .row{
     transform: translateY(-25px);
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 .hide{
     display: none;
